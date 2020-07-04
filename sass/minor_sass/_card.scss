@@ -1,0 +1,138 @@
+.box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(phone) {
+        display: block;
+    }
+}
+
+.card {
+    margin-top: 4rem;
+    width: 45%;
+    padding: 4rem 2rem;
+    border-radius: 2rem;
+
+    @include respond(tab-land) {
+        padding: 3rem 1.3rem;
+        margin-top: 2rem;
+    }
+
+    @include respond(tab-port) {
+        width: 48%;
+        padding: 2.5rem 1rem;
+    }
+
+    @include respond(phone) {
+        width: 90%;
+        padding: 2.5rem 1rem;
+    }
+    
+
+    &__price {
+
+        &-symbol {
+            text-align: center;
+            height: 3rem;
+            width: 3rem;
+            color: $color-white;
+            display: inline-block;
+            font-size: 2rem;
+            padding: .5rem;
+            background-color: $color-purple-dark;
+            border-radius: .5rem;
+        }
+
+        &-head {
+            display: inline-block;
+            font-size: 2.5rem;
+            margin-left: 1rem;
+        }
+
+        &-value {
+            display: block;
+            margin: 3rem 0;
+            font-size: 3.5rem;
+            color: $color-text-right;
+
+            &-cost {
+                color: $color-black;
+
+                &-period {
+                    font-size: 1.8rem;
+                    color: $color-text-right;
+                }
+            }
+        }
+    }
+
+    &__ticks {
+        margin: 3rem 0;
+        font-size: 1.8rem;
+
+        &-item {
+            margin-bottom: 1.5rem;
+            color: $color-text-right;
+
+            &-check{
+                margin-right: 1rem;
+                padding: .5rem;
+                border-radius: .7rem;
+
+                @include respond(tab-port) {
+                    margin-right: .5rem;
+                    padding: .4rem;
+                }
+
+                &-1 {
+                    background-color: $color-black;
+                }
+
+                &-2 {
+                    background-color: $color-white;
+                }
+            }
+        }
+    }
+
+    &1 {
+        background-color: $color-1;
+    }
+
+    &2 {
+        background-color: $color-purple-light;
+        color: $color-white;
+
+        &-price {
+            color: $color-white;
+        }
+    }
+
+    &__start {
+        margin-top: 6rem;
+        margin-bottom: 3rem;
+
+        &-now {
+            text-decoration: none;
+            font-size: 2rem;
+            padding: 2rem 4rem;
+            border-radius: 2rem;
+
+            @include respond(tab-port) {
+                padding: 1.5rem 2rem;
+                border-radius: 1rem;
+            }
+
+            &1 {
+                background-color: $color-purple-light;
+                color: $color-white;
+            }
+            
+            &2 {
+                background-color: $color-white;
+                color: $color-purple-light;
+            }
+        }
+    }
+}
